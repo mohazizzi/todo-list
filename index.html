@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/89e3ab34d1.js" crossorigin="anonymous"></script>
+    <title>To-Do webssite</title>
+</head>
+<body>
+<section class="main-section">
+    <div class="side-container" data-side-container>
+        <div class="user">
+            <div class="user-picture">
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+            </div>
+            <div class="user-id">
+                <p>good day</p>
+                <p>user name</p>
+            </div>
+        </div>
+        <hr>
+        <a class="home-page-link" data-home-page-btn><i class="fas fa-home"></i><p>HOME</p></a>
+        <hr>
+        <div class="to-do-folders">
+            <h2>My Lists</h2>
+            <ul class="to-do-group"  data-folders-links></ul>
+            <form action="" class="folders-form" data-add-new-list-form>
+                <input type="text" class="folders-input" placeholder="add new list" aria-label="add new list" data-add-new-list-input>
+                <button class="folders-btn" aria-label="add new list"><i class="fas fa-plus-circle"></i></button>
+            </form>
+        </div>
+    </div>
+    <div class="middle-container">
+        <div class="main-container" data-main-container>
+            <div class="home-page showcase" data-home-page>
+                <h1>To-Do webssite</h1>
+                <p><i class="fas fa-tasks"></i>Write tasks that must be done</p>
+            </div>
+            <div class="tasks-page" data-tasks-page>
+                <div class="tasks-header">
+                    <p data-tasks-title>youtube</p>
+                    <div class="folder-details">
+                        <div class="show-date" id="date" data-show-date>monday, Fe 13</div>
+                        <div class="tasks-count" data-tasks-count>3 tasks remaining</div>
+                    </div>
+                </div>
+                <div class="tasks-group" data-tasks-group></div>
+                <form action="" class="tasks-form" data-add-new-task-form>
+                    <input type="text" class="tasks-input" placeholder="add new task" aria-label="add new task" data-add-new-task-input>
+                    <button class="tasks-form-btn" aria-label="add new task"><i class="fas fa-plus-circle"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="darl-mode-panel">
+        <div class="toggler-conatainer">
+            <div class="menu-toggler" data-menu-toggler>
+                <span class="toggler-1"></span>
+                <span class="toggler-2"></span>
+                <span class="toggler-3"></span>
+            </div>
+        </div>
+        <div class="delete-buttons">
+            <button class="delete-btn delete-task-are-done" data-delete-task><span>Delete tasks that completed</span><i class="fas fa-eraser"></i></button>
+            <button class="delete-btn delete-folder" data-delete-folder><span>Dlete the currently selected folder</span><i class="fas fa-trash-alt"></i></button>
+        </div>
+        <div class="dark-mode-button">
+            <input type="checkbox" id="darkmode" data-dark-mode-checkbox/>
+            <label for="darkmode" ><i class="fas fa-moon"></i></label>
+        </div>
+    </div>
+</section>
+<template id="task-template">
+    <div class="task">
+        <input type="checkbox"/>
+        <label><span class="custom-checkbox"></span></label>
+    </div>
+</template>
+<script src="script.js"></script>
+</body>
+</html>
